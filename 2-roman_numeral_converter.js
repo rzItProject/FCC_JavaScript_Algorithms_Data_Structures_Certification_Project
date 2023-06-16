@@ -2,7 +2,8 @@
  *  Roman Numeral Converter
 */
 
-// js algorithm - V1
+// V1 - First code
+
 function convertToRoman(num) {
     // Object containing the Roman numeral values
     const romanNumeral = {
@@ -56,9 +57,9 @@ function convertToRoman(num) {
 
 console.log(convertToRoman(3999));
 
-// Optimized - V2
+// V2 - Optimized code
 
-function convertToRomanOp(num) {
+function convertToRoman(num) {
     // Object containing the Roman numeral values
     const romanNumeral = {
         M: 1000,
@@ -75,17 +76,22 @@ function convertToRomanOp(num) {
         IV: 4,
         I: 1
     }
-
     let result = '';
-
+    
+    // Iterate through each key in the romanNumeral object
     for(let key in romanNumeral){
-        while(num >= romanNumeral[key]){
-            result+= key;
-            num -= romanNumeral[key];
-        }  
+      // Check if the number is greater than or equal to the current Roman numeral value
+      while(num >= romanNumeral[key]){
+        // Append the current Roman numeral to the result string
+        result += key;
+        // Subtract the Roman numeral value from the number
+        num -= romanNumeral[key];
+      }
     }
-
+    
+    // Return the final Roman numeral representation
     return result;
 }
+
 
 console.log(convertToRomanOp(3999));
