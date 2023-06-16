@@ -5,5 +5,5 @@
 ### 1 - Palindrome Checker
 ### 2 - Roman Numeral Converter
 ### 3 - Caesars Cipher - ROT13 - Letters are shifted by 13 places (a → n)
-### 4 - Palindrome Checker
-### 5 - Palindrome Checker
+### 4 - US Telephone Number Validator
+### 5 - Cash Register
